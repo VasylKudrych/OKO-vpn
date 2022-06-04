@@ -13,6 +13,10 @@
     width: 1070px;
     margin: -100px 0 0 85px;
 
+    & img {
+      max-width: none!important;
+    }
+
     &--sm {
       display: none;
     }
