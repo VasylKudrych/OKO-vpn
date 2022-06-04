@@ -1,0 +1,290 @@
+@import "../fonts";
+@import "../variables";
+
+.header {
+  padding: 30px 0;
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-burger {
+    display: none;
+  }
+
+  &__logo {
+    margin-left: -120px;
+    padding: 5px 0 5px 50px;
+    background-image: url("../../img/Frame 151.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    @include font-bold;
+    font-size: 22px;
+    color: $color_title;
+    & span {
+      @include font-medium;
+      color: $color-primary;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    &-btn {
+      margin-right: -120px;
+      & a {
+        color: $color-primary;
+        text-decoration-line: none;
+
+        &:hover {
+          color: $color_secondary;
+          text-decoration-line: underline;
+          text-decoration-color: $color_secondary;
+        }
+      }
+    }
+  }
+
+  &-nav {
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 0 50px;
+    }
+
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    a {
+      text-decoration-line: none;
+      @include font-medium;
+      font-size: 14px;
+      color: $color_secondary;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    &__button {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1659px) {
+  .header {
+
+    &__logo {
+      margin: 0;
+    }
+
+    &__menu {
+      &-btn {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  .header {
+    padding: 25px 0;
+    &__menu {
+      gap: 12px;
+    }
+
+    &-nav {
+      ul {
+        gap: 0 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    z-index: 50;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 0;
+
+    &.active:before {
+      border-bottom: 1px solid rgba(152, 160, 170, 0.2);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      z-index: 2;
+    }
+
+    &-burger:before,
+    &-burger:after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 100%;
+      height: 3px;
+    }
+
+    &-burger {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      width: 32px;
+      height: 25px;
+      z-index: 4;
+
+      & span {
+        position: absolute;
+        background-color: black;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        top: 11px;
+      }
+    }
+
+    &-burger:before {
+      top: 0;
+    }
+
+    &-burger:after {
+      bottom: 0;
+    }
+
+    &-burger.active:before {
+      transform: rotate(45deg);
+      top: 11px;
+    }
+
+    &-burger.active span {
+      transform: scale(0);
+    }
+
+    &-burger.active:after {
+      transform: rotate(-45deg);
+      bottom: 11px;
+    }
+
+    &__logo {
+      z-index: 4;
+    }
+
+    &__menu {
+      &-btn {
+        @include font-semiBold;
+        z-index: 4;
+      }
+    }
+
+    &-nav {
+      position: fixed;
+      z-index: 1;
+      top: -300%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding-top: 70px;
+      background-color: white;
+      ul {
+        width: 718px;
+        margin: 0 auto;
+      }
+
+      li {
+        padding: 18px 0 22px 10px;
+        border-bottom: 1px solid rgba(152, 160, 170, 0.2);;
+      }
+
+      a {
+        color: $color_title;
+      }
+
+      &.active {
+        top: 0;
+        ul {
+          flex-direction: column;
+        }
+      }
+
+      &__button {
+        margin-top: 170px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  .header {
+
+    & .container {
+
+    }
+
+    &__logo {
+      font-size: 18px;
+      padding: 7px 0 7px 40px;
+    }
+
+    &-burger {
+      width: 22.5px;
+      height: 15px;
+
+      & span {
+        top: 6px;
+      }
+    }
+
+    &-burger.active:before {
+      top: 6px;
+    }
+
+    &-burger.active:after {
+      bottom: 6px;
+    }
+
+    &-nav {
+
+      & ul {
+        width: 100%;
+        padding: 0 15px;
+        margin: 0;
+      }
+
+      & a {
+        @include font-semiBold;
+      }
+
+      &__button {
+        margin-top: 170px;
+        display: flex;
+        justify-content: center;
+
+        & .btn {
+          width: 100%;
+          max-width: 350px;
+        }
+      }
+    }
+  }
+}
+

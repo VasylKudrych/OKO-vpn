@@ -1,0 +1,145 @@
+@import "../fonts";
+@import "../variables";
+
+.section-counties {
+
+  &-photo--sm {
+    display: none;
+  }
+
+  &__title {
+    @include font-bold;
+    font-size: 34px;
+    color: $color_title;
+
+    & span {
+      color: $color-primary;
+    }
+  }
+
+  &__subtitle {
+    max-width: 480px;
+    margin: 35px 0;
+    @include font-medium;
+    font-size: 16px;
+    color: $color_secondary;
+  }
+
+  &__items {
+    margin: 110px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 54px;
+
+    &--sm {
+      display: none;
+      margin-top: 35px;
+
+      & .section-counties-item {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+
+}
+
+.section-counties-item {
+
+  &__title {
+    @include font-medium;
+    font-size: 16px;
+    color: $color_secondary!important;
+  }
+
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0 0 0!important;
+    padding: 0!important;
+    gap: 24px;
+  }
+
+  & li {
+    width: 46px;
+    height: 33px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section-counties {
+
+    &__content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-photo--sm {
+      display: block;
+      margin: 35px 0 40px 0;
+      padding: 0 10px;
+      max-width: 330px;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & .btn {
+      width: 100%;
+      max-width: 350px;
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 28px;
+      text-align: center;
+      & span {
+      }
+    }
+
+    &__subtitle {
+      margin: 25px 0;
+      font-size: 12px;
+      text-align: center;
+      max-width: none;
+    }
+
+    &__items {
+      margin: 50px 0;
+      gap: 33px;
+      display: none!important;
+
+      &--sm {
+        display: block;
+      }
+    }
+
+
+  }
+
+  .section-counties-item {
+    width: 100%;
+
+    &__title {
+      font-size: 14px;
+    }
+
+    & ul {
+      gap: 20px;
+    }
+
+    & li {
+      width: 39px;
+      height: 30px;
+    }
+  }
+}

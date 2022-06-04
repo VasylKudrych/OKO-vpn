@@ -1,0 +1,131 @@
+@import "../fonts";
+@import "../variables";
+
+.section-vpn {
+
+  & .container {
+    padding: 250px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__photo {
+    min-width: 620px;
+
+    &--sm {
+      display: none;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+.section-vpn-content {
+  margin-left: 260px;
+
+  &__title {
+    @include font-bold;
+    font-size: 34px;
+    color: $color_title;
+  }
+
+  &__text {
+    margin: 42px 0;
+    @include font-medium;
+    font-size: 16px;
+    color: $color_secondary;
+  }
+}
+
+@media (max-width: 1439px) {
+  .section-vpn {
+
+    & .container {
+      padding: 130px 0;
+    }
+
+    &__photo {
+      min-width: 515px;
+
+      &--sm {
+      }
+
+      & img {
+      }
+    }
+  }
+
+  .section-vpn-content {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .section-vpn {
+
+    & .container {
+      padding: 130px 20px;
+      flex-direction: column;
+    }
+
+    &__photo {
+      order: 2;
+      margin-top: 25px;
+    }
+  }
+
+  .section-vpn-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    order: 1;
+
+    &__text {
+      margin: 25px 0;
+    }
+
+    & .btn {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section-vpn {
+
+    & .container {
+      padding: 90px 15px 90px 15px;
+    }
+
+    &__photo {
+      display: none;
+
+      &--sm {
+        max-width: 330px;
+        display: block;
+        margin: 50px 0;
+      }
+    }
+  }
+
+  .section-vpn-content {
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__text {
+      margin: 25px 0 0 0;
+      font-size: 12px;
+    }
+  }
+}

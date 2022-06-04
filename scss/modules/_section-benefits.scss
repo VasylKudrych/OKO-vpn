@@ -1,0 +1,160 @@
+@import "../fonts";
+@import "../variables";
+
+
+.section-benefits {
+
+  padding: 40px 0 0 0;
+
+  & .container {
+
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__title {
+    @include font-bold;
+    color: $color_title;
+    font-size: 34px;
+  }
+
+  &__subtitle {
+    @include font-medium;
+    color: $color_secondary;
+    font-size: 16px;
+  }
+
+  &__items {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.section-benefits-item {
+  position: relative;
+  width: 420px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  padding: 95px 36px 45px 36px;
+
+  &__photo {
+    position: absolute;
+    top: -61px;
+    left: 50%;
+    margin-left: -61px;
+    height: 122px;
+    width: 122px;
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include font-bold;
+    color: $color_title;
+    font-size: 22px;
+  }
+
+  &__subtitle {
+    margin-top: 27px;
+    @include font-medium;
+    color: $color_secondary;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .section-benefits {
+
+    &__content {
+      display: block;
+    }
+
+    &__subtitle {
+      margin-top: 15px;
+    }
+
+    &__items {
+      margin-top: 110px;
+      gap: 15px;
+    }
+  }
+
+  .section-benefits-item {
+    padding: 90px 20px 45px 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .section-benefits {
+
+    &__title {
+      text-align: center;
+    }
+
+    &__subtitle {
+      text-align: center;
+    }
+
+    &__items {
+      flex-direction: column;
+      margin-top: 108px;
+      gap: 108px;
+      align-items: center;
+    }
+  }
+
+  .section-benefits-item {
+    width: 330px;
+    padding: 80px 15px 30px 15px;
+    &__photo {
+      margin-left: -50px;
+      height: 100px;
+      width: 100px;
+      & img {
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section-benefits {
+
+    &__content {
+      align-items: center;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__subtitle {
+      margin-top: 25px;
+      font-size: 12px;
+    }
+  }
+
+  .section-benefits-item {
+    width: 330px;
+    padding: 80px 15px 30px 15px;
+    &__photo {
+      margin-left: -50px;
+      height: 100px;
+      width: 100px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__subtitle {
+      font-size: 12px;
+    }
+  }
+}

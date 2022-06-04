@@ -1,0 +1,132 @@
+@import "../fonts";
+@import "../variables";
+
+.section-functions {
+
+  &__content {
+    max-width: 840px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    @include font-bold;
+    font-size: 34px;
+    color: $color_title;
+    & span {
+      color: $color_primary;
+    }
+  }
+
+  &__subtitle {
+    max-width: 480px;
+    margin: 33px auto 0 auto;
+    @include font-medium;
+    font-size: 16px;
+    color: $color_secondary;
+  }
+
+  &__items {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.section-functions-item {
+
+  padding: 40px 35px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  min-width: 300px;
+  max-width: 300px;
+
+  &--active {
+    border: 2px solid #2268EF;
+  }
+
+  &__logo {
+    width: 160px;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  & ul {
+    margin: 33px 0 0 0;
+    padding: 0;
+  }
+
+  & li {
+    list-style: none;
+    padding: 3px 0 3px 44px;
+    margin: 0 0 18px 0;
+    @include font-medium;
+    font-size: 14px;
+    color: $color_secondary;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  &--free {
+    background-image: url("../../img/Done.png");
+
+  }
+
+  &--paid {
+    background-image: url("../../img/Done.svg");
+  }
+
+  & li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1439px) {
+  .section-functions {
+
+    &__items {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  .section-functions-item {
+    margin-top: 30px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .section-functions {
+
+    &__items {
+      overflow-x: auto;
+      gap: 20px;
+      margin-top: 60px;
+      padding-bottom: 30px;
+      justify-content: start;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .section-functions-item {
+    padding: 35px 37px;
+    min-width: 260px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-functions {
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__subtitle {
+      margin-top: 25px;
+      font-size: 12px;
+    }
+  }
+}

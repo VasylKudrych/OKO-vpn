@@ -1,0 +1,52 @@
+body {
+  overflow-x: hidden;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 10px;
+}
+
+
+.scroll-button {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  padding: 5px;
+  background: #EBF2F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 1439px) {
+  .container {
+    width: 940px;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .container {
+    width: 758px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+}

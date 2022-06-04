@@ -1,0 +1,40 @@
+@import "variables";
+@import "fonts";
+
+.btn {
+  padding: 16px 34px;
+  @include font-bold;
+  font-size: 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.3s all;
+}
+
+.btn-primary {
+  color: white;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  &:hover {
+    color: $color-primary;
+    background-color: white;
+  }
+}
+
+.btn-secondary {
+  color: $color-primary;
+  background-color: white;
+  border: 1px solid $color-primary;
+  &:hover {
+    color: white;
+    background-color: $color-primary;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .btn {
+    padding: 11px 16px;
+    font-size: 12px;
+  }
+}
