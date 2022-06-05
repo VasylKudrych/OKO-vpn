@@ -50,6 +50,10 @@
     @include font-medium;
     font-size: 16px;
     color: $color_secondary!important;
+
+    &:hover {
+      text-shadow: 0 0 1px $color_secondary;
+    }
   }
 
   & ul {
@@ -71,6 +75,10 @@
       width: 100%;
     }
   }
+}
+
+.uk-width-2-5\@m {
+  width: auto!important;
 }
 
 @media (max-width: 767px) {
@@ -114,29 +122,24 @@
     }
 
     &__items {
-      margin: 50px 0;
-      gap: 33px;
+      gap: 0;
+      margin: 0;
     }
   }
 
   .section-counties-item {
     width: 100%;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &__title {
       font-size: 14px;
       cursor: pointer;
       position: relative;
 
-      &:after {
-        position: absolute;
-        content: ">";
-        width: 1.5em;
-        height: 1.5em;
-        top: 0;
-        right: 0;
-        font-size: 20px;
-        transform: rotate(90deg);
-      }
     }
 
     & ul {
@@ -147,5 +150,17 @@
       width: 39px;
       height: 30px;
     }
+  }
+
+  .uk-nav-parent-icon>.uk-parent>a::after {
+    transform: rotate(90deg);
+  }
+
+  .uk-nav-parent-icon>.uk-parent.uk-open>a::after {
+    transform: rotate(0deg);
+  }
+
+  [class*=uk-width] {
+    width: 100%!important;
   }
 }

@@ -25,47 +25,9 @@ $(document).ready(function(){
 
     if ($containerWidth <= 767)  {
 
-        // $(".section-counties-item__title--active").click(function(){
-        //     $(".sub-menu").slideToggle();
-        // });
-        //
-        // $(".section-counties-item__title").hover(
-        //     function() {
-        //         $(this).toggleClass('section-counties-item__title--active')
-        //     }
-        // );
+        $("li.section-counties-item").addClass("uk-parent");
 
-        $(".section-counties-item__title--US").click(function(){
-            $(".sub-menu--US").slideToggle();
-        });
-
-        $(".section-counties-item__title--AF").click(function(){
-            $(".sub-menu--AF").slideToggle();
-        });
-
-        $(".section-counties-item__title--SA").click(function(){
-            $(".sub-menu--SA").slideToggle();
-        });
-
-        $(".section-counties-item__title--EU").click(function(){
-            $(".sub-menu--EU").slideToggle();
-        });
-
-        $(".section-counties-item__title--CA").click(function(){
-            $(".sub-menu--CA").slideToggle();
-        });
-
-        $(".section-counties-item__title--SB").click(function(){
-            $(".sub-menu--SB").slideToggle();
-        });
-
-        $(".section-counties-item__title--OU").click(function(){
-            $(".sub-menu--OU").slideToggle();
-        });
-
-        $(".section-counties-item__title--A").click(function(){
-            $(".sub-menu--A").slideToggle();
-        });
+        $(".section-counties-item-ul").addClass("uk-nav-sub");
 
     } else return 0;
 });

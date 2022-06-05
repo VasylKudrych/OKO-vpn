@@ -1,3 +1,5 @@
+@import "variables";
+
 body {
   overflow-x: hidden;
 }
@@ -30,6 +32,16 @@ body.lock {
   cursor: pointer;
 }
 
+::-webkit-scrollbar{
+  background-color: #DCDCDC;;
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: $color-primary;
+}
+
 @media (max-width: 1439px) {
   .container {
     width: 940px;
@@ -48,5 +60,11 @@ body.lock {
   .container {
     width: 100%;
     padding: 0 15px;
+  }
+
+  ::-webkit-scrollbar{
+    background-color: #DCDCDC;;
+    height: 4px;
+    width: 4px;
   }
 }
