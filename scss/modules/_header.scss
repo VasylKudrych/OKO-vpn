@@ -65,6 +65,7 @@
       @include font-medium;
       font-size: 14px;
       color: $color_secondary;
+      white-space: nowrap;
 
       &:hover {
         color: $color-primary;
