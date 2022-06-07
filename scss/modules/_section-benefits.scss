@@ -3,12 +3,9 @@
 
 
 .section-benefits {
+  overflow: hidden;
 
   padding: 40px 0 0 0;
-
-  & .container {
-
-  }
 
   &__content {
     display: flex;

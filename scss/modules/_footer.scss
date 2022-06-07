@@ -2,6 +2,7 @@
 @import "../variables";
 
 .footer {
+  overflow-x: hidden;
 
   &-items {
     display: flex;
@@ -83,32 +84,6 @@
 
       &--sm {
         gap: 30px;
-      }
-    }
-
-    &-item {
-      &__title {
-      }
-
-      ul {
-      }
-
-      &__soc-net {
-      }
-
-      li {
-      }
-
-      li a {
-
-        &:hover {
-        }
-      }
-
-      a {
-      }
-
-      &-link {
       }
     }
 

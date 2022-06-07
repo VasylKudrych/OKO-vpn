@@ -2,16 +2,13 @@
 @import "../variables";
 
 .section-bnr {
-
-  background-image: url("../../img/Mask group.png");
+  overflow: hidden;
+  background-image: url("../img/bnr-bg.png");
   background-position: center center;
   background-repeat: no-repeat;
 
   & .container {
     padding: 115px 0;
-  }
-
-  &__content {
   }
 
   &__subtitle {

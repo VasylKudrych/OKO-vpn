@@ -2,6 +2,7 @@
 @import "../variables";
 
 .section-services {
+  overflow-x: hidden;
   &__photo {
 
     &--sm {

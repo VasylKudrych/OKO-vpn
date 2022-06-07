@@ -2,6 +2,7 @@
 @import "../variables";
 
 .section-vpn {
+  overflow-x: hidden;
 
   & .container {
     padding: 250px 0;
@@ -52,12 +53,6 @@
 
     &__photo {
       min-width: 515px;
-
-      &--sm {
-      }
-
-      & img {
-      }
     }
   }
 

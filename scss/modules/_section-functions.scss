@@ -2,6 +2,7 @@
 @import "../variables";
 
 .section-functions {
+  overflow-x: hidden;
 
   &__content {
     max-width: 840px;
@@ -30,6 +31,7 @@
     margin-top: 70px;
     display: flex;
     justify-content: space-between;
+    overflow-y: hidden;
   }
 }
 
@@ -70,12 +72,12 @@
   }
 
   &--free {
-    background-image: url("../../img/Done.png");
+    background-image: url("../img/Done.png");
 
   }
 
   &--paid {
-    background-image: url("../../img/Done.svg");
+    background-image: url("../img/Done.svg");
   }
 
   & li:last-child {
@@ -88,8 +90,9 @@
   .section-functions {
 
     &__items {
-      flex-wrap: wrap;
-      justify-content: space-around;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 30px;
     }
   }
 
@@ -103,10 +106,7 @@
   .section-functions {
 
     &__items {
-      overflow-x: auto;
-      gap: 20px;
       margin-top: 60px;
-      padding-bottom: 30px;
       justify-content: start;
       flex-wrap: nowrap;
     }
@@ -131,3 +131,4 @@
     }
   }
 }
+

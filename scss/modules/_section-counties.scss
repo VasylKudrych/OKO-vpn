@@ -2,6 +2,7 @@
 @import "../variables";
 
 .section-counties {
+  overflow-x: hidden;
 
   &-photo--sm {
     display: none;
@@ -26,6 +27,7 @@
   }
 
   &__items {
+
     margin: 110px 0;
     display: flex;
     flex-wrap: wrap;
@@ -49,18 +51,15 @@
   &__title {
     @include font-medium;
     font-size: 16px;
-    color: $color_secondary!important;
-
-    &:hover {
-      text-shadow: 0 0 1px $color_secondary;
-    }
+    color: $color_secondary !important;
+    cursor: auto;
   }
 
   & ul {
     display: flex;
     flex-wrap: wrap;
-    margin: 25px 0 0 0!important;
-    padding: 0!important;
+    margin: 25px 0 0 0 !important;
+    padding: 0 !important;
     gap: 24px;
   }
 
@@ -77,8 +76,21 @@
   }
 }
 
+.uk-nav-parent-icon>.uk-parent>a::after {
+  display: none!important;
+}
+
 .uk-width-2-5\@m {
   width: auto!important;
+}
+
+@media (min-width: 768px) {
+  .section-counties-item {
+
+    & ul {
+      display: flex !important;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -110,7 +122,10 @@
     &__title {
       font-size: 28px;
       text-align: center;
-      & span {
+      cursor: pointer;
+
+      &:hover {
+        text-shadow: 0 0 1px $color_secondary;
       }
     }
 
@@ -140,6 +155,9 @@
       cursor: pointer;
       position: relative;
 
+      & :after {
+        display: inline-block !important;
+      }
     }
 
     & ul {
@@ -152,15 +170,17 @@
     }
   }
 
-  .uk-nav-parent-icon>.uk-parent>a::after {
-    transform: rotate(90deg);
+  .uk-nav-parent-icon > .uk-parent > a::after {
+    transform: rotate(-90deg);
+    display: block!important;
   }
 
-  .uk-nav-parent-icon>.uk-parent.uk-open>a::after {
-    transform: rotate(0deg);
+  .uk-nav-parent-icon > .uk-parent.uk-open > a::after {
+    transform: rotate(180deg);
   }
 
   [class*=uk-width] {
-    width: 100%!important;
+    width: 100% !important;
   }
 }
+

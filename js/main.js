@@ -17,17 +17,18 @@ $(document).ready(function () {
         $(".header, .header-burger, .header-nav").toggleClass("active");
         $("body").toggleClass("lock");
     });
+
+    AOS.init();
 });
 
-$(document).ready(function(){
+$('.section-counties-item').on('click', function (event) {
 
-    let $containerWidth = $(window).width();
+    let windowWidth = $(window).width();
 
-    if ($containerWidth <= 767)  {
+    if (windowWidth >= 768)  {
+        event.stopPropagation();
+    }
+})
 
-        $("li.section-counties-item").addClass("uk-parent");
 
-        $(".section-counties-item-ul").addClass("uk-nav-sub");
 
-    } else return 0;
-});
